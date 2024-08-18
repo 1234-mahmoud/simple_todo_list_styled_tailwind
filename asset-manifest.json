@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simple_todo_list_styled_tailwind/static/css/main.9cb42298.css",
+    "main.js": "/simple_todo_list_styled_tailwind/static/js/main.534b1d2c.js",
+    "index.html": "/simple_todo_list_styled_tailwind/index.html",
+    "main.9cb42298.css.map": "/simple_todo_list_styled_tailwind/static/css/main.9cb42298.css.map",
+    "main.534b1d2c.js.map": "/simple_todo_list_styled_tailwind/static/js/main.534b1d2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cb42298.css",
+    "static/js/main.534b1d2c.js"
+  ]
+}
