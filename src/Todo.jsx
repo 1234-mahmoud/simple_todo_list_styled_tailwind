@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import TodoStates from "./TodoStates";
-
+import DeleteBtns from './DeleteBtns';
 export default function Todo() {
   const [task, setTask] = useState([]);
   const inputRef = useRef();
@@ -74,7 +74,11 @@ export default function Todo() {
 
       <>
         <h1 className="text-2xl font-bold">TodoList</h1>
-        {task.map((todo, idx) => (
+        {
+  task.length >0?<DeleteBtns/>:''
+
+}
+        {task.map((todo) => (
           <div key={todo.id}>
             <TodoStates
               toggleCheck={() => toggleCheck(todo.id)}
@@ -84,6 +88,7 @@ export default function Todo() {
             />
           </div>
         ))}
+
       </>
     </>
   );

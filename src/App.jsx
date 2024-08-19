@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 import ControlBtns from './ControlBtns';
-import DeleteBtns from './DeleteBtns';
+// import DeleteBtns from './DeleteBtns';
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <h1 className="text-2xl font-bold">TodoInput</h1>
       <ControlBtns/>
       <Todo />
-      <DeleteBtns/>
+      {/* <DeleteBtns/> */}
       
     </div>
   );
