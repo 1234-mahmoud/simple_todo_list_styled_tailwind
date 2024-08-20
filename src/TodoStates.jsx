@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-export default function TodoStates({
-  toggleCheck,
-  check,
-  task,
-  del,
-
-}) {
+export default function TodoStates({ toggleCheck, check, task, del }) {
   const [editbtn, setEditbtn] = useState(false);
   const [editingTxt, setEditingTxt] = useState(task);
-  
 
   const handleEditBtn = () => {
     setEditbtn(true);
@@ -18,9 +11,9 @@ export default function TodoStates({
     setEditingTxt(e.target.value);
   };
 
-  const handleSave=()=>{
+  const handleSave = () => {
     setEditbtn(false);
-  }
+  };
   return (
     <div className="w-auto">
       <div className=" flex justify-between items-center gap-x-64 border-solid border-stone-300 border-2 mx-auto my-10 p-5 rounded-md">
@@ -40,7 +33,7 @@ export default function TodoStates({
             </button>
           </div>
         ) : (
-          <p>{editingTxt}</p>
+          <p className={check ? "line-through" : "no-underline"}>{editingTxt}</p>
         )}
         <div className="flex gap-3 justify-center items-center">
           <input
@@ -49,7 +42,7 @@ export default function TodoStates({
             type="checkbox"
             name=""
             id=""
-            className="w-4 h-4 text-green-600 accent-green-600 rounded border-gray-300 focus:ring-green-500"
+            className={`w-4 h-4 text-green-600 accent-green-600 rounded border-gray-300 focus:ring-green-500`}
           />
           <svg
             className="h-5 w-5 text-yellow-600 cursor-pointer"

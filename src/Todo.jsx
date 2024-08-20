@@ -3,6 +3,7 @@ import TodoStates from "./TodoStates";
 import DeleteBtns from './DeleteBtns';
 export default function Todo() {
   const [task, setTask] = useState([]);
+  // const [completed,setCompleted]=useState(false)
   const inputRef = useRef();
 
   //function to add tasks
@@ -25,18 +26,25 @@ export default function Todo() {
     setTask(
       task.map((item) => {
         if (item.id === todo) {
-          return { ...item, completed: !item.completed };
+          return { ...item, completed: !item.completed};
         }
         return item;
       })
     );
   };
 
-  //function to delete done tasks
+  //function to delete single tasks
   const handleDelete = (id) => {
     const filterdItems = task.filter((item) => item.id !== id);
     setTask(filterdItems);
   };
+
+  //function to make all tasks done
+
+  // const doneTasks = ()=>{
+ 
+  // }
+
 
   return (
     <>
@@ -75,7 +83,7 @@ export default function Todo() {
       <>
         <h1 className="text-2xl font-bold">TodoList</h1>
         {
-  task.length >0?<DeleteBtns/>:''
+  task.length >0?<DeleteBtns />:''
 
 }
         {task.map((todo) => (
@@ -85,6 +93,7 @@ export default function Todo() {
               task={todo.val}
               check={todo.completed}
               del={() => handleDelete(todo.id)}
+
             />
           </div>
         ))}
