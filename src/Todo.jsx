@@ -36,14 +36,9 @@ export default function Todo() {
   //function to delete single tasks
   const handleDelete = (id) => {
     const filterdItems = task.filter((item) => item.id !== id);
+    //return a new array with all items with id != the selected item id
     setTask(filterdItems);
   };
-
-  //function to make all tasks done
-
-  // const doneTasks = ()=>{
- 
-  // }
 
 
   return (
@@ -87,7 +82,7 @@ export default function Todo() {
 
 }
         {task.map((todo) => (
-          <div key={todo.id}>
+          <div key={todo.id} className="w-full">
             <TodoStates
               toggleCheck={() => toggleCheck(todo.id)}
               task={todo.val}

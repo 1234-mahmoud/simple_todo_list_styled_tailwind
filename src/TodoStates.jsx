@@ -15,10 +15,10 @@ export default function TodoStates({ toggleCheck, check, task, del }) {
     setEditbtn(false);
   };
   return (
-    <div className="w-auto">
-      <div className=" flex justify-between items-center gap-x-64 border-solid border-stone-300 border-2 mx-auto my-10 p-5 rounded-md">
+    <div className="">
+      <div className=" flex justify-between items-center gap-3 border-solid border-stone-300 border-2 mx-auto my-10 p-5 rounded-md">
         {editbtn ? (
-          <div>
+          <div className="">
             <input
               type="text"
               className="w-full border-2 border-stone-400 border-solid rounded-md"
@@ -26,7 +26,7 @@ export default function TodoStates({ toggleCheck, check, task, del }) {
               onChange={handleChange_}
             />
             <button
-              className="mx-6 bg-green-600 rounded-md task-center  px-5 py-1 text-white text-center"
+              className="mx-6 my-3 bg-green-600 rounded-md task-center  px-5 py-1 text-white text-center"
               onClick={handleSave}
             >
               save
